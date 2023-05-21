@@ -1,19 +1,16 @@
 <html>
-    <head>
-        <title>Three Photos Side by Side</title>
-        <style>
-          .photo-section {
-            display: flex;
-            justify-content: space-between;
-          }
+    <script>
+        function enlargePhoto(photoId) {
+          var photo = document.getElementById(photoId);
+          photo.classList.add('active');
+        }
       
-          .photo {
-            width: 30%; /* Adjust the width as needed */
-          }
-        </style>
-      </head>
-
-
+        function closeEnlargedPhoto(photoId) {
+          var photo = document.getElementById(photoId);
+          photo.classList.remove('active');
+        }
+      </script>
+      
     <head>
         <link href="style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -32,7 +29,7 @@
             <!-- resume header with your name and title -->
             <h1>JULIAN RÓIN SKOVHUS</h1>
             <hr>
-            WELCOME
+            ... UNDER CONSTRUCTION ...
             <hr>
         </header>
         <main>
@@ -64,8 +61,8 @@
                     <p><strong>Mathematical modelling and computing</strong> at DTU |  2020-2023 </p>
                     Core subjects
                     <ul>
-                        <li>Network Optimization</li>
-                        <li>Deep learning</li>
+                        <li>Advanced Image Analysis</li>
+                        <li>Deep Learning</li>
                         <li>Stochastic Processes</li>
                     </ul>
                     <br> </br>
@@ -74,15 +71,16 @@
                     <ul>
                         <li>Matematics 1, 2 and 3</li>
                         <li>Constrained Optimization</li>
-                        <li>Mathematical modelling</li>
+                        <li>Mathematical Modelling</li>
                     </ul>                
 
                 </section>  
 
                 <section>
-                    <h2>PROGRAMMING SKILLS</h2>
+                    <h2>MAIN NON-VERBAL LANGUAGES</h2>
+                    ordered according to skills
                     <!-- your skills -->
-                    <p>Python, C, SQL, Excel VBA</p> 
+                    <p>Python, SQL, Excel VBA, C</p> 
                 </section>  
 
             </article>
@@ -99,7 +97,7 @@
                     </p>          
                 </section>
                 <section>
-                    <h2>WORK EXPERIENCE</h2>
+                    <h2>WORK RELATED EXPERIENCE</h2>
                     <!-- your work experience -->
                     <p> <strong> COWI </strong> </p> 
                     <p>
@@ -144,38 +142,37 @@
             <h2> PROJECTS </h2>
             <br> </br>
             <hr> </hr>
-            <h2> PHOTOGRAPHY </h2>
-            <section class="photo-section"></section>
+            <h2> SAMPLE OF (DIGITAL) PHOTOGRAPHIES </h2>
+            <section class="photo-section">
                 <!-- <div class="row"> -->
-                <div class="column">
-                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/sand.jpg?raw=true" alt="sand" width = 280>
+                <div class="photo" id="photo1" onclick="enlargePhoto('photo1')">
+                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/sand.jpg?raw=true" alt="sand" width = 300>
                 </div>
-                <div class="column">
-                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/sten.jpg?raw=true" alt="sten" width = 280>
+                <div class="photo" id="photo2" onclick="enlargePhoto('photo2')">
+                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/sten.jpg?raw=true" alt="sten" width = 300>
                 </div>
-                <div class="column">
-                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/hus.jpg?raw=true" alt="hus" width = 280>
-                </div>
-                <div class="column">
-                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/cabaret_lille.JPG?raw=true" alt="cabaret" width = 280>
-                </div>
-                <div class="column">
-                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/rundkorsel_bil.JPG?raw=true" alt="rundkorsel" width = 280>
-                </div>
-                <div class="column">
-                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/bygning_metro.JPG?raw=true" alt="metro" width = 280>
-                </div>
-                <div class="column">
-                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/front_bil.JPG?raw=true" alt="front_bil" width = 280>
-                </div>
-                <div class="column">
-                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/svingom.JPG?raw=true" alt="svingom" width = 280>
-                </div>
-                <div class="column">
-                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/thom.jpg?raw=true" alt="thom" width = 280>
+                <div class="photo" id="photo3" onclick="enlargePhoto('photo3')">
+                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/hus.jpg?raw=true" alt="hus" width = 300>
                 </div>
             </section>
+            <section class="photo-section">
+                <div class="photo" id="photo4" onclick="enlargePhoto('photo4')">
+                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/bygning_metro.JPG?raw=true" alt="metro" width = 300>
+                </div>
+                <div class="photo" id="photo5" onclick="enlargePhoto('photo5')">
+                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/rundkorsel_bil.JPG?raw=true" alt="rundkorsel" width = 300>
+                </div>
+                <div class="photo" id="photo6" onclick="enlargePhoto('photo6')">
+                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/cabaret_lille.JPG?raw=true" alt="cabaret" width = 300>
+                </div>
+            </section>
+
+
             <!-- </div> --> 
+            <div class="enlarged-photo" id="enlargedPhoto1" onclick="closeEnlargedPhoto('enlargedPhoto1')">
+                <img src="https://github.com/pontius-pilates/resume/blob/main/img/sand.jpg?raw=true" alt="Enlarged Photo 1">
+            </div>
+
 
         </article>
     </body>
