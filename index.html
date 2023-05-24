@@ -1,15 +1,4 @@
 <html>
-    <script>
-        function enlargePhoto(photoId) {
-          var photo = document.getElementById(photoId);
-          photo.classList.add('active');
-        }
-      
-        function closeEnlargedPhoto(photoId) {
-          var photo = document.getElementById(photoId);
-          photo.classList.remove('active');
-        }
-      </script>
       
     <head>
         <link href="style.css" rel="stylesheet">
@@ -39,12 +28,12 @@
                     <!-- contact info including social media -->
                     <p>
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <a href="mailto:roininho@gmail.com">roininho@gmail.com</a>
+                        <a href="mailto:roininho@gmail.com">s174045@dtu.dk</a>
                     </p>
 
                     <p>
                         <i class="fab fa-linkedin" aria-hidden="true"></i>
-                        <a href="linkedin.com/julian-róin-skovhus-1a0b08127">Julian Róin Skohvus</a>
+                        <a href="linkedin.com/julian-róin-skovhus-1a0b08127">Julian Róin Skovhus</a>
                     </p>
                     <p>
                         <i class="fab fa-twitter" aria-hidden="true"></i>
@@ -77,8 +66,8 @@
                 </section>  
 
                 <section>
-                    <h2>MAIN NON-VERBAL LANGUAGES</h2>
-                    ordered according to skills
+                    <h2>NON-VERBAL LANGUAGES</h2>
+                    Ordered according to experience
                     <!-- your skills -->
                     <p>Python, SQL, Excel VBA, C</p> 
                 </section>  
@@ -92,8 +81,7 @@
                     Engineering student at DTU following the MSc. program Mathematical Modelling and Computing.
                     My primary areas of interest involve data science with an emphasis on 
                     stochastic modelling and machine learning methodologies towards creating 
-                    a more sustainable future. <br>
-                    Passion for photography, literature and football. Scroll to the bottom of the page to see some of my analog and digital shots.
+                    a more sustainable future. I enjoy photography, reading, tennis and football. 
                     </p>          
                 </section>
                 <section>
@@ -139,40 +127,52 @@
 
         </main>
         <article>
-            <h2> PROJECTS </h2>
-            <br> </br>
+            <h2> EXCERPT OF PROJECTS DONE AT DTU</h2>
+            <section class="photo-section">
+                <div class="photo">
+                  <a href="https://julieolin.github.io/week8/">
+                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/manahatten_boroughs.png?raw=true" alt="Photo 1" width = 300>
+                    <div class="photo-title">Social Data Analysis</div>
+                  </a>
+                </div>
+                <div class="photo">
+                  <a href="https://github.com/pontius-pilates/DeepLearningFinalProject/">
+                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/gaussian_p.png?raw=true" alt="Photo 2" width = 300>
+                    <div class="photo-title">Gaussian Processes </div>
+                  </a>
+                </div>
+                <div class="photo">
+                  <a href="https://github.com/Fiskehandleren/Thesis">
+                    <img src="https://github.com/pontius-pilates/resume/blob/main/img/weekly_hourly_agg-kopi.png?raw=true" alt="Photo 3" width = 300>
+                    <div class="photo-title">Censorship-aware Deep Learning models </div>
+                  </a>
+                </div>
+              </section>
             <hr> </hr>
-            <h2> SAMPLE OF (DIGITAL) PHOTOGRAPHIES </h2>
+            <h2> SOME  <SPAN STYLE="font-family:'Courier; font-size:22.0pt" >[DIGITAL]</SPAN>  PHOTOGRAPHIES </h2>
             <section class="photo-section">
                 <!-- <div class="row"> -->
-                <div class="photo" id="photo1" onclick="enlargePhoto('photo1')">
+                <div class="photo" id="sand" onclick="enlargePhoto('sand')">
                     <img src="https://github.com/pontius-pilates/resume/blob/main/img/sand.jpg?raw=true" alt="sand" width = 300>
                 </div>
-                <div class="photo" id="photo2" onclick="enlargePhoto('photo2')">
+                <div class="photo" id="sten" onclick="enlargePhoto('sten')">
                     <img src="https://github.com/pontius-pilates/resume/blob/main/img/sten.jpg?raw=true" alt="sten" width = 300>
                 </div>
-                <div class="photo" id="photo3" onclick="enlargePhoto('photo3')">
+                <div class="photo" id="hus" onclick="enlargePhoto('hus')">
                     <img src="https://github.com/pontius-pilates/resume/blob/main/img/hus.jpg?raw=true" alt="hus" width = 300>
                 </div>
             </section>
             <section class="photo-section">
-                <div class="photo" id="photo4" onclick="enlargePhoto('photo4')">
+                <div class="photo" id="metro" onclick="enlargePhoto('metro')">
                     <img src="https://github.com/pontius-pilates/resume/blob/main/img/bygning_metro.JPG?raw=true" alt="metro" width = 300>
                 </div>
-                <div class="photo" id="photo5" onclick="enlargePhoto('photo5')">
+                <div class="photo" id="rundkorsel" onclick="enlargePhoto('rundkorsel')">
                     <img src="https://github.com/pontius-pilates/resume/blob/main/img/rundkorsel_bil.JPG?raw=true" alt="rundkorsel" width = 300>
                 </div>
-                <div class="photo" id="photo6" onclick="enlargePhoto('photo6')">
+                <div class="photo" id="cabaret" onclick="enlargePhoto('cabaret')">
                     <img src="https://github.com/pontius-pilates/resume/blob/main/img/cabaret_lille.JPG?raw=true" alt="cabaret" width = 300>
                 </div>
             </section>
-
-
-            <!-- </div> --> 
-            <div class="enlarged-photo" id="enlargedPhoto1" onclick="closeEnlargedPhoto('enlargedPhoto1')">
-                <img src="https://github.com/pontius-pilates/resume/blob/main/img/sand.jpg?raw=true" alt="Enlarged Photo 1">
-            </div>
-
 
         </article>
     </body>
